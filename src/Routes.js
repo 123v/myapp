@@ -4,16 +4,15 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import App from './App'
-import ReverseText from './ReverseText'
-import Slider from './Slider'
+import App from './containers/App'
+import MovieDetail from './containers/MovieDetail'
 
 export default function routes() {
     return (
         <Router>
             <Switch>
-                <Route exact path="/slider" component={Slider} />
-                <Route exact path="/reversetext" component={ReverseText} />
+                <Route exact path="/" component={App} />
+                <Route exact path="/moviedetail" component={MovieDetail} />
             </Switch>
         </Router>
     )
