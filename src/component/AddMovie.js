@@ -91,9 +91,6 @@ export default class AddMovie extends Component {
      */
     submit = async (value) => {
         try {
-            console.log("called");
-            console.log(value);
-
             if (this.state.image_url !== '') {
                 let obj = {
                     id: this.props.total + 1,
@@ -255,9 +252,9 @@ export default class AddMovie extends Component {
                         </div>
                     </Form.Item>
                     <Form.Item {...tailLayout}>
-                        <Button type="primary" onClick={() => { console.log("called 1") }} htmlType="submit">Add</Button>
+                        <Button type="primary" onClick={() => {}} htmlType="submit">Add</Button>
                         <Button onClick={async () => {
-                            await this.BankFormRef.current.resetFields()
+                            await this.formRef.current.resetFields()
                             this.props.onCancel()
                         }}>Cancel</Button>
                     </Form.Item>

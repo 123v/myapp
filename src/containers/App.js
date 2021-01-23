@@ -20,6 +20,8 @@ export default class App extends Component {
 		let newMovieList = JSON.parse(window.localStorage.getItem('movieList'))
 		if (newMovieList && newMovieList.length > 0) {
 			this.setState({allMoviewList: newMovieList})
+		} else {
+			window.localStorage.setItem('movieList', JSON.stringify(this.state.allMoviewList))
 		}
 	}
 	
@@ -66,6 +68,9 @@ export default class App extends Component {
 		this.setState({ allMoviewList: filteredRows })
 	}
 	
+
+	//moto G4 , iphone 6/7/8 plus, ipad , desktop
+
 	getData = async (data) => {
 		try {
 			console.log("data app.js",data);

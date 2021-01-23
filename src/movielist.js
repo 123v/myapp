@@ -3,7 +3,7 @@
 const movieList = [
     {
         id: 1,
-        image: require('./images/starvars.png'),
+        image: require('./images/frozen.jpg'),
         movie_name: 'Star Vars: Episode VIII: The Last Jedi',
         title: 'Star Vars',
         sub_title: 'The Last Jedi',
@@ -35,7 +35,7 @@ const movieList = [
     },
     {
         id: 3,
-        image: require('./images/setitup.png'),
+        image: require('./images/infinitywars.png'),
         movie_name: 'Set it up',
         title: 'Set it up',
         sub_title: 'Movie',
@@ -51,7 +51,7 @@ const movieList = [
     },
     {
         id: 4,
-        image: require('./images/thecrown.png'),
+        image: require('./images/joker.jpg'),
         movie_name: 'The Crown',
         title: 'The crown',
         sub_title: 'the crown',

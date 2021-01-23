@@ -26,6 +26,7 @@ export default class MovieCard extends Component {
         let id = urlParams.get('id')
         
         let movieList = JSON.parse(window.localStorage.getItem('movieList'))
+        
         if (movieList && movieList.length > 0) {
             for (const item of movieList) {
                 if (Number(item.id) === Number(id)) {
@@ -59,8 +60,9 @@ export default class MovieCard extends Component {
                 <div className="movie-card-container" style={{backgroundImage: `url(${image})`}}>
                     <div className="movie-card-details-container">
                         <Row>
-                            <Col xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }} span={8}>
-                                <img src={image} alt={title} />
+                            <Col xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }} span={8} className="bg-image-container">
+                                {/* <img src={image} alt={title} height={100} width={'100'} /> */}
+                                <div className="bg-image" style={{backgroundImage:`url("${image}")`}}></div>
                             </Col>
                             <Col xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }} span={16}>
                                 <div className="movie-card-header">
